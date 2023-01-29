@@ -2518,6 +2518,8 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			width: 100%;
+			overflow: hidden;
+			background-color: #f8e5d1;
 		}
 
 			.image.fill img {
@@ -2772,7 +2774,7 @@ input, select, textarea {
 				}
 
 				ul.icons li .icon:hover {
-					background-color: rgba(144, 144, 144, 0.1);
+					background-color: rgba(144, 144, 144, 0.3);
 				}
 
 /* Table */
@@ -3408,7 +3410,7 @@ input, select, textarea {
 			}
 
 		#wrapper .copyright {
-			color: rgba(0, 0, 0, 0.25);
+			color: rgba(0, 0, 0, 1);
 			font-size: 1rem;
 			left: 50vw;
 			position: relative;
