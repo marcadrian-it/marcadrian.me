@@ -206,3 +206,17 @@
 					});
 
 })(jQuery);
+const toggleSwitch = document.querySelector('#theme-toggle');
+const body = document.querySelector('body');
+const image = document.getElementById('myimage');
+
+toggleSwitch.addEventListener('change', function() {
+	
+	if (!this.checked) {
+	  body.classList.remove('night-theme');
+	  image.src = 'images/picd01.svg';
+	} else {
+	  body.classList.add('night-theme');
+	  image.src = 'images/picd02.svg';
+	}
+  });
