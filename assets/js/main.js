@@ -209,14 +209,49 @@
 const toggleSwitch = document.querySelector('#theme-toggle');
 const body = document.querySelector('body');
 const image = document.getElementById('myimage');
+const themeKey = 'my-site-theme';
+
+// Check if there is a saved theme in cookies
+const cookies = document.cookie.split(';').map(cookie => cookie.trim().split('='));
+const savedTheme = cookies.find(cookie => cookie[0] === themeKey)?.[1];
+if (savedTheme) {
+  body.classList.add(savedTheme);
+  if (savedTheme === 'night-theme') {
+    toggleSwitch.checked = true;
+    image.src = 'images/picd02.svg';
+  }
+}
 
 toggleSwitch.addEventListener('change', function() {
-	
-	if (!this.checked) {
-	  body.classList.remove('night-theme');
-	  image.src = 'images/picd01.svg';
-	} else {
-	  body.classList.add('night-theme');
-	  image.src = 'images/picd02.svg';
-	}
+  if (this.checked) {
+    body.classList.add('night-theme');
+    image.src = 'images/picd02.svg';
+    document.cookie = `${themeKey}=night-theme; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+  } else {
+    body.classList.remove('night-theme');
+    image.src = 'images/picd01.svg';
+    document.cookie = `${themeKey}=day-theme; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+  }
+});
+const form = document.querySelector('form');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  fetch('https://formspree.io/f/xyyajzvr', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    alert('Thank you for your submission!');
+    form.reset();
+  })
+  .catch(error => {
+    console.error('Error:', error);
   });
+});
