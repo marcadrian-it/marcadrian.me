@@ -4098,4 +4098,9 @@ body.is-ie #wrapper>section>.content>section {
 	content: "\f185";
   }
  
-  
+  .content p{
+	text-align: justify;
+ }
+ .content > p{
+	margin-right: 2.5%;
+ }
