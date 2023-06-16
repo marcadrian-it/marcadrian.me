@@ -21,11 +21,11 @@
       gtag("config", "G-T5DTYQQ5LY");
     </script>
 
-    <title>marcadrian dev</title>
+    <title>Marcadrian dev</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1, user-scalable=5"
     />
     <meta name="description" content="Adrian is a full-stack developer specializing in building innovative websites and web apps using modern technologies. He holds a Master's degree in English Philology and is fascinated by artificial intelligence.">
     <meta name="keywords" content="full-stack developer, web development, modern technologies, artificial intelligence">
@@ -44,7 +44,7 @@
   <body class="is-preload">
     <!-- Wrapper -->   
     <label class="toggle-btn" for="theme-toggle">
-      <input type="checkbox" id="theme-toggle">
+      <input type="checkbox" id="theme-toggle" aria-label="Switch to day/night theme">
       <i class="fa-solid fa-moon-over-sun"></i>
     </label>
     <div id="wrapper">
@@ -58,6 +58,7 @@
           <ul class="actions">
             <li>
               <a href="#first" class="arrow scrolly"
+              aria-label="Scroll down to the next section"
                 ><span class="label">Next</span></a
               >
             </li>
@@ -79,7 +80,32 @@
           <p>
             <strong>As a full-stack developer</strong>,  I specialize in building innovative websites and web apps using modern technologies. I am versatile in my work, and I enjoy exploring both front and back-end web development. In addition to my technical skills, I hold a Master's degree in English Philology, specializing in business communication in English and German. Prior to my career as a full-stack developer, I worked as a paralegal for a law firm that offered outsourcing for prominent firms. During that time, I sharpened my customer service skills and also analyzed data as part of my job. I am fascinated by artificial intelligence and am always looking for new ways to learn more about it. 
           </p>
-          <span class="image main"><img src="images/profile.JPG" alt="Profile photo of Adrian, a full-stack developer" /></span>
+          <!--Picture-->  
+          
+          <picture class="image main">
+            <img
+              width="1400"
+              height="933"
+              sizes="(max-width: 1400px) 100vw, 1400px"
+              srcset="
+                images/AY7I0188-min_jhw2ba_c_scale,w_200.jpg 200w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_555.jpg 555w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_740.jpg 740w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_830.jpg 830w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_942.jpg 942w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_1058.jpg 1058w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_1147.jpg 1147w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_1245.jpg 1245w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_1331.jpg 1331w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_1371.jpg 1371w,
+                images/AY7I0188-min_jhw2ba_c_scale,w_1400.jpg 1400w"
+              src="images/AY7I0188-min_jhw2ba_c_scale,w_1400.jpg"
+              alt="Profile photo of Adrian, a full-stack developer"
+            />
+          </picture>
+          
+          
+  
         </div>
       </section>
 
@@ -278,6 +304,7 @@
                     href="https://github.com/marcadrian-it"
                     target="_blank"
                     class="icon brands fa-github"
+                    aria-label="View my GitHub profile"
                     ><span class="label">GitHub</span></a
                   >
                 </li>
@@ -286,6 +313,7 @@
                     href="https://www.linkedin.com/in/adriansoltysik/"
                     target="_blank"
                     class="icon brands fa-linkedin-in"
+                    aria-label="Connect with me on LinkedIn"
                     ><span class="label">LinkedIn</span></a
                   >
                 </li>
@@ -294,6 +322,7 @@
                     href="https://twitter.com/marcadrian_it"
                     target="_blank"
                     class="icon brands fa-twitter"
+                    aria-label="Follow me on Twitter"
                     ><span class="label">Twitter</span></a
                   >
                 </li>
