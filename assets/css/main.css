@@ -4088,10 +4088,20 @@ body.is-ie #wrapper>section>.content>section {
   	top: 1rem;
   	left: 1rem;
   	z-index: 9999;
-	
 	font-size: 2em;
   }
-  
+  .toggle-lang {
+	position: absolute;
+	width: 180px;
+	height: 2rem;
+	color: #000000;
+	background-color: #ffffff;
+	top: 1rem;
+	left: 5rem;
+	z-index: 9999;
+  }
+
+
   /* Toggle Button Icon for Light Mode */
   #theme-toggle:not(:checked) + .fa-moon-over-sun:before {
 	content: "\f186";

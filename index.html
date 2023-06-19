@@ -48,19 +48,25 @@
       <input type="checkbox" id="theme-toggle" aria-label="Switch to day/night theme">
       <i class="fa-solid fa-moon-over-sun"></i>
     </label>
+    <script src="https://unpkg.com/i18next@23.1.0/dist/umd/i18next.min.js"></script>
+
+    <select id="language-selector" class="toggle-lang">
+      <option value="en">English</option>
+      <option value="pl">Polski</option>
+    </select>
     <div id="wrapper">
       <!-- Intro -->
       
       <section class="intro">
         
         <header>
-          <h1>Hi, my name is Adrian.</h1>
-          <p>I'm a software developer with some cool projects under my belt</p>
+          <h1 data-i18n="intro-header">Hi, my name is Adrian.</h1>
+          <p data-i18n="intro-paragraph">I'm a web developer with some cool projects under my belt</p>
           <ul class="actions">
             <li>
               <a href="#first" class="arrow scrolly"
               aria-label="Scroll down to the next section"
-                ><span class="label">Next</span></a
+                ><span class="label" data-i18n="intro-next">Next</span></a
               >
             </li>
           </ul>
@@ -75,11 +81,11 @@
       <!-- Section -->
       <section id="first">
         <header>
-          <h2>About Me</h2>
+          <h2 data-i18n="about-me-header">About Me</h2>
         </header>
         <div class="content">
-          <p>
-            <strong>As a full-stack developer</strong>,  I specialize in building innovative websites and web apps using modern technologies. I am versatile in my work, and I enjoy exploring both front and back-end web development. In addition to my technical skills, I hold a Master's degree in English Philology, specializing in business communication in English and German. Prior to my career as a full-stack developer, I worked as a paralegal for a law firm that offered outsourcing for prominent firms. During that time, I sharpened my customer service skills and also analyzed data as part of my job. I am fascinated by artificial intelligence and am always looking for new ways to learn more about it. 
+          <p data-i18n="about-me-paragraph">
+            <strong>As a web developer</strong>,  I specialize in building innovative websites and web apps using modern technologies. I am versatile in my work, and I enjoy exploring both front and back-end web development. In addition to my technical skills, I hold a Master's degree in English Philology, specializing in business communication in English and German. Prior to my career as a web developer, I worked as a paralegal for a law firm that offered outsourcing. During that time, I sharpened my customer service skills and also analyzed data as part of my job. I am fascinated by artificial intelligence and am always looking for new ways to learn more about it. 
           </p>
           <!--Picture-->  
           
@@ -113,14 +119,14 @@
       <!-- Section -->
       <section>
         <header>
-          <h2>My skills</h2>
+          <h2 data-i18n="skills-header">My skills</h2>
         </header>
         <div class="content">
-          <p>
+          <p data-i18n="skills-paragraph-1">
             <strong
               >I'm proficient in a variety of web development
               technologies</strong
-            >, including HTML5, CSS3, JavaScript, React, Express, Node.js and Python. I have extensive
+            >, including HTML5, CSS3, Typescript/JavaScript, React, Next.js, Express, GraphQL, Node.js, Docker and Python. I have
             experience using these technologies to create dynamic, user-friendly
             websites and applications.
           </p>
@@ -128,16 +134,16 @@
           <ul class="feature-icons">
             <li class="fa-brands fa-html5">HTML5</li>
             <li class="fa-brands fa-css3-alt">CSS3</li>
-            <li class="fa-brands fa-js">Java Script</li>
+            <li class="fa-brands fa-js"> Typescript / JavaScript</li>
             <li class="fa-brands fa-node-js">Node.js</li>
-            <li class="fa-brands fa-react">React.js</li>
+            <li class="fa-brands fa-react">React</li>
             <li class="fa-brands fa-python">Python</li>
             <li class="fa-brands fa-git-alt">Git</li>
-            <li class="icon solid fa-database">Databases</li>
+            <li class="icon solid fa-database" data-i18n="icon">Databases</li>
           </ul>
-          <p>
+          <p data-i18n="skills-paragraph-2">
             I'm constantly striving to improve my understanding of web
-            development and enhance my skills as a full-stack developer. In
+            development and enhance my skills as a web developer. In
             addition, I'm committed to staying up-to-date with the latest
             developments in the industry.
           </p>
@@ -147,41 +153,38 @@
       <!-- Section -->
       <section>
         <header>
-          <h2>My projects</h2>
+          <h2 data-i18n="projects-header">My projects</h2>
         </header>
         <div class="content">
-          <p>
+          <p data-i18n="projects-paragraph">
             <strong>My portfolio features a variety of projects</strong> that
-            showcase my skills and expertise in web development. Some of the
-            standout projects in my portfolio include a responsive e-commerce
-            website, a dynamic landing page for a startup, and a mobile-friendly
+            showcase my skills and experience in web development. Some of the
+            standout projects in my portfolio include a reddit-style website for content sharing, simple web app that aids in the search of animals at a local shelter, virtual slot machine, responsive
+            layouts for a gym, startup and restaurant, and a modern
             web application for managing tasks and projects.
           </p>
 
           <!-- Section -->
           <section>
             <header>
-              <h3>Project One</h3>
-              <p>
-                Vehicula ultrices dolor amet ultricies et condimentum. Magna sed
-                etiam consequat, et lorem adipiscing sed dolor sit amet,
-                consectetur amet do eiusmod tempor incididunt ipsum suspendisse
-                ultrices gravida.
+              <a href="https://www.marcadrian.dev/"><h3>Sharesphere</h3></a>
+              <p data-i18n="project1-paragraph">
+                <strong>Sharesphere</strong> is a website resembling Reddit, where users can create posts and share content. The website is built using <strong>TypeScript, GraphQL, Apollo GraphQL, NodeJS, Express, Redis, PostgreSQL, Docker</strong> for the backend and <strong>Vercel, Next.js, ChakraUI</strong> for the frontend.
               </p>
             </header>
             <div class="content">
               <div class="gallery">
                 <a href="images/gallery/fulls/01.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/01.jpg" alt=""
+                  ><img src="images/gallery/thumbs/01.jpg" alt="sharesphere"
                 /></a>
                 <a href="images/gallery/fulls/02.jpg"
-                  ><img src="images/gallery/thumbs/02.jpg" alt=""
+                  ><img src="images/gallery/thumbs/02.jpg" alt="sharesphere"
                 /></a>
                 <a href="images/gallery/fulls/03.jpg"
-                  ><img src="images/gallery/thumbs/03.jpg" alt=""
+                  ><img src="images/gallery/thumbs/03.jpg" alt="sharesphere"
                 /></a>
                 <a href="images/gallery/fulls/04.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/04.jpg" alt=""
+                  ><img src="images/gallery/thumbs/04.jpg" alt="sharesphere"
                 /></a>
               </div>
             </div>
@@ -190,24 +193,20 @@
           <!-- Section -->
           <section>
             <header>
-              <h3>Project Two</h3>
-              <p>
-                Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                aliquam sed facilisis ante interdum congue. Integer mollis, nisl
-                amet convallis, porttitor magna ullamcorper, amet mauris. Ut
-                magna finibus nisi nec lacinia ipsum maximus.
-              </p>
+              <h3>Progress-patron</h3>
+              <p data-i18n="project2-paragraph">Progress-patron is a modern web application for managing tasks and projects. It is built with <strong>Typescript</strong> using the latest technologies, including <strong>Next.js</strong> for server-side rendering, <strong>PostgreSQL</strong> for database management, <strong>Tailwind</strong> for styling, and <strong>Vercel</strong> for deployment using serverless edge runtime. With its intuitive interface and powerful features, <strong>Progress-patron</strong> makes it easy to stay on top of your work and achieve your goals.</p>
+
             </header>
             <div class="content">
               <div class="gallery">
                 <a href="images/gallery/fulls/05.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/05.jpg" alt=""
+                  ><img src="images/gallery/thumbs/05.jpg" alt="progress-patron project management web app"
                 /></a>
                 <a href="images/gallery/fulls/06.jpg"
-                  ><img src="images/gallery/thumbs/06.jpg" alt=""
+                  ><img src="images/gallery/thumbs/06.jpg" alt="progress-patron issue tracker"
                 /></a>
                 <a href="images/gallery/fulls/07.jpg"
-                  ><img src="images/gallery/thumbs/07.jpg" alt=""
+                  ><img src="images/gallery/thumbs/07.jpg" alt="progress-patron login screen"
                 /></a>
               </div>
             </div>
@@ -216,23 +215,20 @@
           <!-- Section -->
           <section>
             <header>
-              <h3>Project Three</h3>
-              <p>
-                Proin aliquam facilisis ante interdum. Sed nulla amet lorem
-                feugiat tempus aenean ornare velit lacus, ac varius sed enim
-                lorem ullamcorper dolore. ac varius enim lorem ullamcorper
-                dolore. Proin aliquam facilisis.
+              <h3>Responsive Layouts</h3>
+              <p data-i18n="project3-paragraph">
+                I have built responsive layouts for a variety of projects, including a gym, a startup, and a restaurant. My layouts are tailored to meet the specific needs of each project and provide an optimal user experience.
               </p>
             </header>
             <div class="content">
               <div class="gallery">
-                <a href="images/gallery/fulls/08.jpg" class="portrait"
+                <a href="images/gallery/fulls/08.jpg" class="portrait" aria-label="project three"
                   ><img src="images/gallery/thumbs/08.jpg" alt=""
                 /></a>
-                <a href="images/gallery/fulls/09.jpg" class="portrait"
+                <a href="images/gallery/fulls/09.jpg" class="portrait" aria-label="project three"
                   ><img src="images/gallery/thumbs/09.jpg" alt=""
                 /></a>
-                <a href="images/gallery/fulls/10.jpg" class="landscape"
+                <a href="images/gallery/fulls/10.jpg" class="landscape" aria-label="project three"
                   ><img src="images/gallery/thumbs/10.jpg" alt=""
                 /></a>
               </div>
@@ -244,28 +240,10 @@
       <!-- Section -->
       <section>
         <header>
-          <h2>Duis sed adpiscing veroeros amet</h2>
+          <h2 data-i18n="contact-header">Get in touch</h2>
         </header>
         <div class="content">
-          <p>
-            <strong>Proin tempus feugiat</strong> sed varius enim lorem
-            ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim
-            lorem ullamcorper dolore.
-          </p>
-          <ul class="actions">
-            <li><a href="#" class="button primary large">Get Started</a></li>
-            <li><a href="#" class="button large">Learn More</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Section -->
-      <section>
-        <header>
-          <h2>Get in touch</h2>
-        </header>
-        <div class="content">
-          <p>
+          <p data-i18n="contact-paragraph">
             <strong>Use this contact form to get in touch with me</strong>.
             Please do not hesitate to contact me if you are interested in my services or have any questions.
             I'd be delighted to provide additional information and answer any questions you may have.
@@ -274,20 +252,20 @@
           <form>
             <div class="fields">
               <div class="field half">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" placeholder="Name" />
+                <label for="name" data-i18n="contact-name">Name:</label>
+                <input type="text" name="name" id="name" />
               </div>
               <div class="field half">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email" />
+                <input type="email" name="email" id="email" />
               </div>
               <div class="field">
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                <label for="message" data-i18n="contact-message">Message:</label>
+                <textarea name="message" id="message" rows="7" ></textarea>
               </div>
             </div>
             <ul class="actions">
-              <li><input type="submit" value="Send Message" class="button primary" /></li>
+              <li><input type="submit" value="Send Message" class="button primary" data-i18n="[value]contact-send"/></li>
             </ul>
           </form>
         </div>
@@ -298,7 +276,7 @@
 			  <a href = "mailto: marcadrian.it@gmail.com">marcadrian.it@gmail.com</a>
             </li>
             <li>
-              <h3>Elsewhere</h3>
+              <h3 data-i18n="contact-elsewhere">Elsewhere</h3>
               <ul class="icons">
                 <li>
                   <a
@@ -335,7 +313,7 @@
 
       <!-- Copyright -->
       <div class="copyright">
-        &copy;marcadrian 2023. All rights reserved. Design:
+        <span data-i18n="footer-copyright">&copy;marcadrian 2023. All rights reserved. Design:</span>
         <a href="https://html5up.net">HTML5 UP</a>.
       </div>
     </div>
@@ -345,6 +323,71 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
+    <script>
+      i18next.init({
+        lng: 'en', 
+        resources: {
+          en: {
+            translation: {
+              'intro-header': 'Hi, my name is Adrian.',
+              'intro-paragraph': "I'm a web developer with some cool projects under my belt",
+              'intro-next': 'Next',
+              'about-me-header': 'About Me',
+              'about-me-paragraph': "As a web developer, I specialize in building innovative websites and web apps using modern technologies. I am versatile in my work, and I enjoy exploring both front and back-end web development. In addition to my technical skills, I hold a Master's degree in English Philology, specializing in business communication in English and German. Prior to my career as a web developer, I worked as a paralegal for a law firm that offered outsourcing. During that time, I sharpened my customer service skills and also analyzed data as part of my job. I am fascinated by artificial intelligence and am always looking for new ways to learn more about it.",
+              'icon': "Databases",
+              'skills-header': 'My skills',
+          'skills-paragraph-1': "I'm proficient in a variety of web development technologies, including HTML5, CSS3, Typescript/JavaScript, React, Next.js, Express, GraphQL, Node.js, Docker and Python. I have experience using these technologies to create dynamic, user-friendly websites and applications.",
+          'skills-paragraph-2': "I'm constantly striving to improve my understanding of web development and enhance my skills as a web developer. In addition, I'm committed to staying up-to-date with the latest developments in the industry.",
+          'projects-header': 'My projects',
+          'projects-paragraph': "My portfolio features a variety of projects that showcase my skills and experience in web development. Some of the standout projects in my portfolio include a reddit-style website for content sharing, simple web app that aids in the search of animals at a local shelter, virtual slot machine, responsive layouts for a gym, startup and restaurant, and a modern web application for managing tasks and projects.",
+          "project1-paragraph": "Sharesphere is a website resembling Reddit, where users can create posts and share content. The website is built using TypeScript, GraphQL, Apollo GraphQL, NodeJS, Express, Redis, PostgreSQL, Docker for the backend and Vercel, Next.js, ChakraUI for the frontend.",
+          "project2-paragraph": "Progress-patron is a modern web application for managing tasks and projects. It is built with Typescript using the latest technologies, including Next.js for server-side rendering, PostgreSQL for database management, Tailwind for styling, and Vercel for deployment using serverless edge runtime. With its intuitive interface and powerful features, Progress-patron makes it easy to stay on top of your work and achieve your goals.",
+          "project3-paragraph": "I have built responsive layouts for a variety of projects, including a gym, a startup, and a restaurant. My layouts are tailored to meet the specific needs of each project and provide an optimal user experience.",
+          'contact-header': 'Get in touch',
+          'contact-paragraph': "Use this contact form to get in touch with me. Please do not hesitate to contact me if you are interested in my services or have any questions. I'd be delighted to provide additional information and answer any questions you may have. I hope to hear from you and collaborate with you in the future.",
+          'contact-name': 'Name:',
+          'contact-email': 'Email:',
+          'contact-message': 'Message:',
+          'contact-send': 'Send Message',
+          'contact-email-label': 'Email',
+          'contact-elsewhere': 'Elsewhere',
+          'footer-copyright': '©marcadrian 2023. All rights reserved. Design:'
+            }
+          },
+          pl: {
+            translation: {
+              'intro-header': 'Cześć, jestem Adrian.',
+              'intro-paragraph': "Jestem deweloperem webowym z kilkoma fajnymi projektami na swoim koncie",
+              'intro-next': 'Dalej',
+              'about-me-header': 'O mnie',
+              'about-me-paragraph': "Jako deweloper webowy specjalizuję się w tworzeniu stron i aplikacji internetowych przy użyciu nowoczesnych technologii. Jestem wszechstronny w swojej pracy i lubię rozwijać zarówno front-end, jak i back-end. Oprócz moich umiejętności technicznych posiadam tytuł magistra filologii angielskiej, specjalizując się w komunikacji biznesowej w języku angielskim i niemieckim. Przed rozpoczęciem kariery jako deweloper webowy pracowałem w kancelarii prawnej oferującej outsourcing. W tym czasie doskonaliłem swoje umiejętności obsługi klienta oraz zajmowałem się analizą danych jako część swojej pracy. Fascynuje mnie sztuczna inteligencja i staram się dowiedzieć o niej jak najwięcej.",
+              'icon': "Bazy danych",
+              'skills-header': 'Moje umiejętności',
+    'skills-paragraph-1': "Jestem biegły w wielu technologiach dla sieci Web, w tym HTML5, CSS3, Typescript/JavaScript, React, Next.js, Express, GraphQL, Node.js, Docker i Python. Mam doświadczenie w tworzeniu dynamicznych, przyjaznych dla użytkownika stron internetowych i aplikacji przy użyciu tych technologii.",
+    'skills-paragraph-2': "Nieustannie dążę do poprawy mojego zrozumienia technologii sieciowych oraz usprawnienia moich umiejętności jako programista webowy. Zależy mi również na tym, by być na bieżąco z najnowszymi trendami w branży.",
+    'projects-header': 'Moje projekty',
+    'projects-paragraph': "W moim portfolio znajdziesz wiele projektów, które prezentują moje umiejętności i doświadczenie w obszarze tworzenia stron i aplikacji internetowych. Przykłady niektórych interesujących projektów to: serwis umożliwiający udostępnianie treści w stylu Reddit'a, prosta strona umożliwiająca wyszukiwanie zwierząt w lokalnym schronisku, wirtualna maszyna do gier typu slot, responsywne layouty dostosowujące się do różnych urządzeń oraz nowoczesna aplikacja internetowa do zarządzania projektami oraz zadaniami.",
+    "project1-paragraph": "Sharesphere to serwis przypominający Reddit, na którym użytkownicy mogą tworzyć posty i udostępniać treści. Strona została napisana przy przy użyciu języka TypeScript, technologii, GraphQL, Apollo GraphQL, NodeJS, Express, Redis, PostgreSQL i Docker'a na potrzeby backendu oraz Next.js, ChakraUI, oraz platformy Vercel na potrzeby frontendu.",
+    "project2-paragraph": "Progress-patron to nowoczesna aplikacja internetowa do zarządzania zadaniami i projektami. Została napisanu przy użyciu Typescript, wykorzystując najnowsze technologie, w tym najnowszą odsłonę Next.js do renderowania po stronie serwera, PostgreSQL jako bazę danych, Tailwind do stylizacji oraz Vercel do wdrażania przy użyciu środowiska uruchomieniowego serverless. Dzięki intuicyjnemu interfejsowi i potężnym funkcjom, Progress-patron ułatwia kontrolowanie swojej pracy i osiąganie wyznaczonych celów.",
+    "project3-paragraph": "Stworzyłem responsywne layouty dla różnorodnych projektów, w tym dla siłowni, startupu oraz restauracji. Moje layouty są dopasowane, aby spełnić konkretne potrzeby każdego projektu i zapewnić optymalne doświadczenie użytkownikom.",
+    'contact-header': 'Kontakt',
+          'contact-paragraph': "Skorzystaj z formularza kontaktowego, aby się ze mną skontaktować. Jeśli jesteś zainteresowany moimi usługami lub masz pytania, pisz śmiało. Odpowiem na wszelkie zapytania i chętnie omówię możliwość współpracy.",
+          'contact-name': 'Imię:',
+          'contact-email': 'Email:',
+          'contact-message': 'Wiadomość:',
+          'contact-send': 'Wyślij wiadomość',
+          'contact-email-label': 'Email',
+          'contact-elsewhere': 'Inne platformy',
+          'footer-copyright': '©marcadrian 2023. Wszelkie prawa zastrzeżone. Design:'
+            }
+          }
+        }
+      });
+    
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        el.textContent = i18next.t(el.dataset.i18n);
+      });
+    </script>    
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>

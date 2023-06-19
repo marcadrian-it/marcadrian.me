@@ -209,10 +209,9 @@
 const toggleSwitch = document.querySelector('#theme-toggle');
 const body = document.querySelector('body');
 const image = document.getElementById('myimage');
-const themeKey = 'my-site-theme';
+const themeKey = 'marcadrian-theme';
 
-// Check if there is a saved theme in cookies
-const cookies = document.cookie.split(';').map(cookie => cookie.trim().split('='));
+let cookies = document.cookie.split(';').map(cookie => cookie.trim().split('='));
 const savedTheme = cookies.find(cookie => cookie[0] === themeKey)?.[1];
 if (savedTheme) {
   body.classList.add(savedTheme);
@@ -233,6 +232,35 @@ toggleSwitch.addEventListener('change', function() {
     document.cookie = `${themeKey}=day-theme; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
   }
 });
+
+const languageKey = 'marcadrian-language';
+const languageSelector = document.querySelector('#language-selector');
+
+cookies = document.cookie.split(';').map(cookie => cookie.trim().split('='));
+const savedLanguage = cookies.find(cookie => cookie[0] === languageKey)?.[1];
+if (savedLanguage) {
+  i18next.changeLanguage(savedLanguage);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = i18next.t(el.dataset.i18n);
+  });
+
+  document.querySelector('[data-i18n="[value]contact-send"]').value = i18next.t('contact-send');
+  languageSelector.value = savedLanguage;
+}
+
+languageSelector.addEventListener('change', (event) => {
+  i18next.changeLanguage(event.target.value);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = i18next.t(el.dataset.i18n);
+  });
+
+  document.querySelector('[data-i18n="[value]contact-send"]').value = i18next.t('contact-send');
+  document.cookie = `${languageKey}=${event.target.value}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+});
+
+
+
+
 const form = document.querySelector('form');
 form.addEventListener('submit', e => {
   e.preventDefault();
