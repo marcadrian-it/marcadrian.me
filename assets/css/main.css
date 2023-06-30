@@ -4101,6 +4101,29 @@ body.is-ie #wrapper>section>.content>section {
 	z-index: 9999;
   }
 
+  /* Docker bounces*/
+  li.fa-bounce:hover {
+	animation: bounce 1;
+	cursor:grab;
+  }
+  
+  @keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-30px);
+	}
+	60% {
+	  transform: translateY(-15px);
+	}
+  }
+  
+
 
   /* Toggle Button Icon for Light Mode */
   #theme-toggle:not(:checked) + .fa-moon-over-sun:before {

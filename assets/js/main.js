@@ -259,6 +259,12 @@ languageSelector.addEventListener('change', (event) => {
 });
 
 
+//  Docker stops bouncing
+const docker = document.querySelector('li.fa-bounce');
+docker.addEventListener('click', () => {
+  docker.classList.remove('fa-bounce');
+});
+
 
 
 const form = document.querySelector('form');
