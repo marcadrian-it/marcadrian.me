@@ -4024,12 +4024,12 @@ body.is-ie #wrapper > section > .content > section {
 }
 .toggle-lang {
   position: absolute;
-  width: 180px;
+  width: 190px;
   height: 2rem;
   color: #000000;
   background-color: #ffffff;
   top: 1rem;
-  left: 5rem;
+  left: 4.5rem;
   z-index: 9999;
 }
 
