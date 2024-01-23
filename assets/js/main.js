@@ -251,6 +251,26 @@ if (savedLanguage) {
 
   document.querySelector('[data-i18n="[value]contact-send"]').value = i18next.t('contact-send');
   languageSelector.value = savedLanguage;
+}else{
+	const browserLanguage = navigator.language || navigator.userLanguage;
+    // Example: Convert "en-US" to "en"
+    const defaultLanguage = browserLanguage.split('-')[0];
+
+  // Set default language based on supported languages
+if (['en', 'de', 'pl'].includes(defaultLanguage)) {
+    document.cookie = `${languageKey}=${defaultLanguage}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+	i18next.changeLanguage(defaultLanguage);
+} else {
+    // Default to English for unsupported languages
+    document.cookie = `${languageKey}=en; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+	i18next.changeLanguage(defaultLanguage);
+} 
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = i18next.t(el.dataset.i18n);
+  });
+
+  document.querySelector('[data-i18n="[value]contact-send"]').value = i18next.t('contact-send');
+  languageSelector.value = defaultLanguage;
 }
 
 languageSelector.addEventListener('change', (event) => {
@@ -262,15 +282,6 @@ languageSelector.addEventListener('change', (event) => {
   document.querySelector('[data-i18n="[value]contact-send"]').value = i18next.t('contact-send');
   document.cookie = `${languageKey}=${event.target.value}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
 });
-
-
-//  Docker stops bouncing
-const docker = document.querySelector('li.fa-bounce');
-docker.addEventListener('click', () => {
-  docker.classList.remove('fa-bounce');
-});
-
-
 
 const form = document.querySelector('form');
 form.addEventListener('submit', e => {

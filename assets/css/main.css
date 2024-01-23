@@ -4033,11 +4033,6 @@ body.is-ie #wrapper > section > .content > section {
   z-index: 9999;
 }
 
-/* Docker bounces*/
-li.fa-bounce:hover {
-  animation: bounce 1;
-  cursor: grab;
-}
 
 @keyframes bounce {
   0%,
