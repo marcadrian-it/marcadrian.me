@@ -219,6 +219,11 @@ if (savedTheme) {
     toggleSwitch.checked = true;
     image.src = 'images/picd02.svg';
   }
+}else {
+  // Set the default theme to 'night-theme'
+  body.classList.add('night-theme');
+  image.src = 'images/picd02.svg';
+  document.cookie = `${themeKey}=night-theme; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
 }
 
 toggleSwitch.addEventListener('change', function() {
