@@ -153,7 +153,7 @@
       event.stopPropagation();
     })
     .prepend(
-      '<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>',
+      '<div class="modal" tabIndex="-1"><div class="inner"><img src="" alt="Gallery image"/></div></div>',
     )
     .find("img")
     .on("load", function (event) {
@@ -273,4 +273,3 @@ form.addEventListener("submit", (e) => {
       console.error("Error:", error);
     });
 });
-
